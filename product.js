@@ -11,8 +11,18 @@ const productSchema = new mongoose.Schema({
     required: true,
     trim: true,
   },
+  description: {
+    type: String,
+    required: true,
+    trim: true,
+  },
+  price: {
+    type: Number,
+    required: true,
+    trim: true,
+  },
 });
 
-const product = mongoose.model("product", heroSchema);
+const product = mongoose.model("product", productSchema);
 
 module.exports = product;
